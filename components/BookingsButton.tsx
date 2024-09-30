@@ -1,10 +1,9 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import {
   Modal,
   ModalBody,
   ModalContent,
-  ModalFooter,
   ModalTrigger,
 } from "./ui/AnimatedModal";
 import Image from "next/image";
@@ -12,6 +11,41 @@ import { motion } from "framer-motion";
 import { images } from "@/data";
 
 export function BookingsButton() {
+  const [user, setUser] = useState({ email: "", name: "" });
+  const [isSending, setIsSending] = useState(false);
+
+  const sendMail = async (e: any) => {
+    e.preventDefault();
+
+    if (!user.name || !user.email) {
+      alert("Please enter both your name and email.");
+      return;
+    }
+    setIsSending(true);
+    try {
+      const response = await fetch("/api/sendMail", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: user.email, name: user.name }),
+      });
+
+      const data = await response.json();
+      if (response.ok) {
+        alert("Booking confirmation sent!");
+      } else {
+        alert("Failed to send booking confirmation.");
+        console.error(data.message);
+      }
+    } catch (error) {
+      alert("Booking not done");
+      console.error("Error sending email:", error);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
   return (
     <div className={`py-4 flex items-center justify-center`}>
       <Modal>
@@ -93,12 +127,42 @@ export function BookingsButton() {
                 </span>
               </div>
             </div>
+            <form onSubmit={sendMail} className="bg-neutral-800 rounded-xl p-3">
+              <p className="text-sm font-semibold mb-2 capitalize">
+                Book your plate
+              </p>
+              <span className="flex flex-col gap-1 w-[20vw]">
+                <input
+                  type="text"
+                  onChange={(e) =>
+                    setUser((prevUser) => ({
+                      ...prevUser,
+                      name: e.target.value,
+                    }))
+                  }
+                  placeholder="Enter your name"
+                  className="rounded-lg p-1 bg-neutral-600 placeholder:text-white"
+                />
+                <input
+                  type="email"
+                  onChange={(e) =>
+                    setUser((prevUser) => ({
+                      ...prevUser,
+                      email: e.target.value,
+                    }))
+                  }
+                  placeholder="Enter your e-mail "
+                  className="rounded-lg p-1 bg-neutral-600 placeholder:text-white"
+                />
+              </span>
+              <button
+                type="submit"
+                className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28"
+              >
+                {isSending ? "Booking..." : "Book Now"}
+              </button>
+            </form>
           </ModalContent>
-          <ModalFooter>
-            <button className="bg-black text-white dark:bg-white dark:text-black text-sm px-2 py-1 rounded-md border border-black w-28">
-              Book Now
-            </button>
-          </ModalFooter>
         </ModalBody>
       </Modal>
     </div>

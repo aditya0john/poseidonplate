@@ -5,7 +5,7 @@ import { testimonials } from "@/data";
 function Clients() {
   return (
     <div
-      className="select-none flex flex-col items-center justify-center w-screen py-20 text-black/[0.8] bg-slate-50 overflow-hidden"
+      className="select-none flex flex-col items-center justify-center py-20 text-black/[0.8] bg-slate-50 overflow-hidden"
       id="Testimonials"
     >
       <h1 className="heading text-4xl lg:text-5xl font-bold">
