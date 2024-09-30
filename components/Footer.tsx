@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const Footer = () => {
@@ -56,10 +57,10 @@ const Footer = () => {
   return (
     <div
       id="footer"
-      className="min-h-[30vh] bg-gray-200 mx-auto flex items-center justify-around select-none py-10"
+      className="min-h-[30vh] bg-gray-200 w-screen flex items-center justify-around select-none px-3 py-10 overflow-hidden"
     >
       <span>
-        <ul className="shdg font-semibold text-black/[0.8] flex flex-col gap-1 capitalize">
+        <ul className="font-semibold text-black/[0.8] flex flex-col gap-1 capitalize">
           <li>Poseidon Plate</li>
           <li className="text-sm text-black/[0.5]">
             a restaurant like no other,
@@ -71,7 +72,7 @@ const Footer = () => {
         </ul>
       </span>
       <span>
-        <ul className="shdg font-semibold text-black/[0.8] uppercase flex justify-center">
+        <ul className="font-semibold text-black/[0.8] uppercase flex justify-center">
           Contact us
         </ul>
         <ul className="wrapper py-10">
@@ -125,56 +126,81 @@ const Footer = () => {
       </span>
 
       <span>
-        <ul className="shdg font-semibold text-black/[0.8] uppercase flex justify-center">
+        <ul className="font-semibold text-black/[0.8] uppercase flex justify-center">
           follow us on
         </ul>
-        <ul className="wrapper py-10">
-          <li className="icon facebook">
-            <span className="tooltip">Facebook</span>
-            <span>
-              <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="currentColor"
-                viewBox="0 0 8 19"
-                stroke="black"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
-              <i className="fab fa-facebook-f"></i>
-            </span>
-          </li>
 
-          <li className="icon instagram">
-            <span className="tooltip">Instagram</span>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="w-8 h-8"
-                viewBox="0 0 24 24"
-              >
-                <g fill="none" stroke="black" stroke-width="1.5">
+        <ul className="wrapper py-10">
+          <Link href="https://www.instagram.com/poseidonplate_?utm_source=qr&igsh=ZzBkOHAxZHp0dHQz">
+            <li className="icon instagram">
+              <span className="tooltip">Instagram</span>
+              <span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="w-8 h-8"
+                  viewBox="0 0 24 24"
+                >
+                  <g fill="none" stroke="black" stroke-width="1.5">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"
+                    />
+                    <path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m17.5 6.51l.01-.011"
+                    />
+                  </g>{" "}
+                  <li className="icon facebook">
+                    <span className="tooltip">Facebook</span>
+                    <span>
+                      <svg
+                        className="w-6 h-6 text-gray-800 dark:text-white"
+                        aria-hidden="true"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="currentColor"
+                        viewBox="0 0 8 19"
+                        stroke="black"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <i className="fab fa-facebook-f"></i>
+                    </span>
+                  </li>
+                </svg>
+                <i className="fab fa-instagram"></i>
+              </span>
+            </li>
+          </Link>
+
+          <Link href="https://www.facebook.com/profile.php?id=61566484715981&mibextid=rS40aB7S9Ucbxw6v">
+            <li className="icon facebook">
+              <span className="tooltip">Facebook</span>
+              <span>
+                <svg
+                  className="w-6 h-6 text-gray-800 dark:text-white"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="currentColor"
+                  viewBox="0 0 8 19"
+                  stroke="black"
+                >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="M12 16a4 4 0 1 0 0-8a4 4 0 0 0 0 8Z"
+                    fill-rule="evenodd"
+                    d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                    clip-rule="evenodd"
                   />
-                  <path d="M3 16V8a5 5 0 0 1 5-5h8a5 5 0 0 1 5 5v8a5 5 0 0 1-5 5H8a5 5 0 0 1-5-5Z" />
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    d="m17.5 6.51l.01-.011"
-                  />
-                </g>
-              </svg>
-              <i className="fab fa-instagram"></i>
-            </span>
-          </li>
+                </svg>
+                <i className="fab fa-facebook-f"></i>
+              </span>
+            </li>
+          </Link>
         </ul>
       </span>
     </div>
