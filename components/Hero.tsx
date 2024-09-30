@@ -4,8 +4,8 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="h-screen bg-slate-50 select-none overflow-hidden">
-      <div className="pt-20 flex flex-col items-center justify-center mb-[22rem] lg:mb-[13rem]">
+    <div className="h-screen mx-auto bg-slate-50 flex flex-col items-center select-none">
+      <div className="pt-20 flex flex-col items-center justify-center mb-[6rem] lg:mb-[13rem]">
         <p className="gap-4 lg:gap-12 capitalize bg-gradient-to-r from-amber-400 to-sky-400 bg-clip-text text-transparent font-bold text-5xl sm:text-6xl md:text-7xl lg:text-9xl flex">
           <span>poseidon </span> <span>plate</span>
         </p>

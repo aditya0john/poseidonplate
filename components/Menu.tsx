@@ -3,10 +3,10 @@ import React from "react";
 
 const Menu = () => {
   return (
-    <div className="font-sans bg-slate-300 h-full flex flex-col items-center justify-center overflow-hidden">
-      <p className="text-black/[0.8] text-6xl font-bold mt-10">MENU</p>
-      <div className=" grid grid-cols-1 sm:grid-cols-2 items-center justify-center p-10">
-        <div className="bg-stone-800/[0.8] rounded-xl h-full my-4 mx-4 p-10">
+    <div className="font-sans bg-slate-300 h-screen flex flex-col items-center justify-center">
+      <p className="text-black/[0.8] text-6xl font-bold">MENU</p>
+      <div className=" grid grid-cols-1 sm:grid-cols-2 items-center justify-center">
+        <div className="bg-stone-800/[0.8] rounded-xl h-[90vh] my-4 mx-4 p-10">
           <span className="grid grid-cols-2 gap-10">
             <ul className="text-md font-semibold">
               <i className="uppercase text-yellow-400 underline underline-offset-4">

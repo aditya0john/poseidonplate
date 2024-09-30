@@ -57,7 +57,7 @@ const Footer = () => {
   return (
     <div
       id="footer"
-      className="min-h-[30vh] bg-gray-200  flex items-center justify-around select-none px-3 py-10 overflow-hidden"
+      className="min-h-[30vh] bg-gray-200 mx-auto flex items-center justify-around select-none py-10"
     >
       <span>
         <ul className="font-semibold text-black/[0.8] flex flex-col gap-1 capitalize">
