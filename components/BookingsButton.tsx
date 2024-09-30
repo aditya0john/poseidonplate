@@ -14,7 +14,7 @@ export function BookingsButton() {
   const [user, setUser] = useState({ email: "", name: "" });
   const [isSending, setIsSending] = useState(false);
 
-  const sendMail = async (e: any) => {
+  const sendMail = async (e) => {
     e.preventDefault();
 
     if (!user.name || !user.email) {
