@@ -13,7 +13,7 @@ import { images } from "@/data";
 
 export function BookingsButton() {
   return (
-    <div className="py-4 flex items-center justify-center">
+    <div className={`py-4 flex items-center justify-center`}>
       <Modal>
         <ModalTrigger className="bg-sky-200 dark:text-black text-white flex justify-center group/modal-btn antialiased">
           <span className="group-hover/modal-btn:translate-x-[130%] text-center transition duration-500 text-md lg:text-2xl font-semibold select-none">
