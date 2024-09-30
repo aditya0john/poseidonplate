@@ -25,11 +25,11 @@ const Hero = () => {
               <span className="text-sky-400">deapths of the ocean</span>
             </span>
             , where every dish is crafted with fresh, locally sourced
-            ingredients and a touch of coastal magic. Whether you're craving
-            authentic Goa seafood or international cuisine, our cozy ambiance
-            and scenic views make for the perfect dining escape. Join us for an
-            unforgettable meal by the beach and let us take your taste buds on a
-            journey!
+            ingredients and a touch of coastal magic. Whether you&apos;re
+            craving authentic Goa seafood or international cuisine, our cozy
+            ambiance and scenic views make for the perfect dining escape. Join
+            us for an unforgettable meal by the beach and let us take your taste
+            buds on a journey!
           </i>
         </p>
       </div>

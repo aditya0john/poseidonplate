@@ -13,7 +13,7 @@ const Menu = () => {
                 starters
               </i>
               {Starters.map((starters, i) => (
-                <ul className="flex flex-col">
+                <ul key={i} className="flex flex-col">
                   <span className="flex justify-between">
                     <li className="text-md font-thin tracking-tighter text-yellow-200">
                       {starters.name}
@@ -37,7 +37,7 @@ const Menu = () => {
                 desserts
               </i>
               {desserts.map((starters, i) => (
-                <ul className="flex flex-col">
+                <ul key={i} className="flex flex-col">
                   <span className="flex justify-between">
                     <li className="text-md font-thin tracking-tighter text-yellow-200">
                       {starters.name}
@@ -62,7 +62,7 @@ const Menu = () => {
               beverages
             </i>
             {beverages.map((starters, i) => (
-              <ul className="flex flex-col">
+              <ul key={i} className="flex flex-col">
                 <span className="flex justify-between">
                   <li className="text-md font-thin tracking-tighter text-yellow-200">
                     {starters.name}
@@ -88,7 +88,7 @@ const Menu = () => {
               sides
             </i>
             {sides.map((starters, i) => (
-              <ul className="flex flex-col">
+              <ul key={i} className="flex flex-col">
                 <span className="flex justify-between">
                   <li className="text-md font-thin tracking-tighter text-yellow-200">
                     {starters.name}
@@ -112,7 +112,7 @@ const Menu = () => {
               Main course
             </i>
             {MainCourse.map((starters, i) => (
-              <ul className="flex flex-col">
+              <ul key={i} className="flex flex-col">
                 <span className="flex justify-between">
                   <li className="text-md font-thin tracking-tighter text-yellow-200">
                     {starters.name}

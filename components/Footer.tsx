@@ -1,19 +1,26 @@
 "use client";
-import { error } from "console";
 import React, { useState } from "react";
 
 const Footer = () => {
-  const [numberCopied, setNumberCopied] = useState(false);
-  const [mailCopied, setMailCopied] = useState(false);
+  const [copied, setCopied] = useState({
+    numberCopied: false,
+    mailCopied: false,
+  });
 
   const copyPhoneNumber = () => {
-    let num = "123-456-7890";
+    const num = "123-456-7890";
 
     navigator.clipboard
       .writeText(num)
       .then(() => {
+        console.log(copied);
+        setCopied((prevCopied) => ({
+          ...prevCopied,
+          numberCopied: true,
+        }));
+
         alert("Phone number copied");
-        setNumberCopied(true);
+
         if (confirm("DO YOU WANT TO OPEN THIS NUMBER ?")) {
           window.open("tel:" + num, "_self");
         }
@@ -25,13 +32,16 @@ const Footer = () => {
   };
 
   const copyMail = () => {
-    let mail = "pundiryash227@gmail.com";
+    const mail = "pundiryash227@gmail.com";
 
     navigator.clipboard
       .writeText(mail)
       .then(() => {
         alert("mail copied");
-        setMailCopied(true);
+        setCopied((prevCopied) => ({
+          ...prevCopied,
+          mailCopied: true,
+        }));
       })
       .catch((error) => {
         alert("Failed to copy mail: " + error.message);
