@@ -5,6 +5,7 @@ import MaxWidthWrapper from "@/components/MaxWidthWrapper";
 import About from "@/components/About";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { navItems } from "@/data";
+import Menu from "@/components/Menu";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <FloatingNav navItems={navItems} />
         <Hero />
         <About />
+        <Menu />
         <Clients />
         <Footer />
       </MaxWidthWrapper>

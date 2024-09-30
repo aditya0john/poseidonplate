@@ -1,8 +1,10 @@
 "use client";
+import { error } from "console";
 import React, { useState } from "react";
 
 const Footer = () => {
   const [numberCopied, setNumberCopied] = useState(false);
+  const [mailCopied, setMailCopied] = useState(false);
 
   const copyPhoneNumber = () => {
     let num = "123-456-7890";
@@ -18,6 +20,21 @@ const Footer = () => {
       })
       .catch((error) => {
         alert("Failed to copy phone number: " + error.message);
+        console.error(error);
+      });
+  };
+
+  const copyMail = () => {
+    let mail = "pundiryash227@gmail.com";
+
+    navigator.clipboard
+      .writeText(mail)
+      .then(() => {
+        alert("mail copied");
+        setMailCopied(true);
+      })
+      .catch((error) => {
+        alert("Failed to copy mail: " + error.message);
         console.error(error);
       });
   };
@@ -71,9 +88,9 @@ const Footer = () => {
               </span>
             </li>
           </button>
-          <button>
+          <button onClick={copyMail}>
             <li className="icon email">
-              <span className="tooltip">E-mail</span>
+              <span className="tooltip">Email</span>
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -122,25 +139,7 @@ const Footer = () => {
               <i className="fab fa-facebook-f"></i>
             </span>
           </li>
-          <li className="icon twitter">
-            <span className="tooltip">Twitter</span>
-            <span>
-              <svg
-                className="w-6 h-6 text-gray-800 dark:text-white"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 20 20"
-                stroke="black"
-              >
-                <path
-                  fill="currentColor"
-                  d="M12.186 8.672 18.743.947h-2.927l-5.005 5.9-4.44-5.9H0l7.434 9.876-6.986 8.23h2.927l5.434-6.4 4.82 6.4H20L12.186 8.672Zm-2.267 2.671L8.544 9.515 3.2 2.42h2.2l4.312 5.719 1.375 1.828 5.731 7.613h-2.2l-4.699-6.237Z"
-                />
-              </svg>
-              <i className="fab fa-twitter"></i>
-            </span>
-          </li>
+
           <li className="icon instagram">
             <span className="tooltip">Instagram</span>
             <span>

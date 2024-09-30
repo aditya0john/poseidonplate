@@ -24,15 +24,15 @@ const About = () => {
         <hr className="lg:hidden md:hidden sm:block border-2 border-white" />
         <div className="flex flex-col gap-20 items-center justify-center">
           <span className="flex flex-col items-center">
-            <p className="text-yellow-500/[0.9] text-3xl">10</p>
+            <p className="text-yellow-300/[0.9] text-3xl">10</p>
             <p className="text-2xl">Years of cullinary expertise</p>
           </span>
           <span className="flex flex-col items-center">
-            <p className="text-yellow-500/[0.9] text-3xl">20</p>
+            <p className="text-yellow-300/[0.9] text-3xl">20</p>
             <p className="text-2xl">skilled cullinary artists</p>
           </span>
           <span className="flex flex-col items-center">
-            <p className="text-yellow-500/[0.9] text-3xl">3000</p>
+            <p className="text-yellow-300/[0.9] text-3xl">3000</p>
             <p className="text-2xl">satisfied dinners</p>
           </span>
         </div>

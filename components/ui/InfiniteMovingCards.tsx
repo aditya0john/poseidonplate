@@ -96,16 +96,16 @@ export const InfiniteMovingCards = ({
                 aria-hidden="true"
                 className="user-select-none -z-1 pointer-events-none absolute -left-0.5 -top-0.5 h-[calc(100%_+_4px)] w-[calc(100%_+_4px)]"
               ></div>
-              <span className="relative z-20 text-lg leading-[1.6] text-stone-800 font-normal">
+              <div className="relative z-20 text-lg leading-[1.6] text-stone-800 font-normal min-h-40">
                 {item.quote}
-              </span>
+              </div>
               <div className="relative z-20 mt-6 flex items-center">
                 <div className="me-3">
                   <Image
-                    src="/profile.svg"
+                    src="/poseidon plate logo.png"
                     alt="image"
-                    height={50}
-                    width={50}
+                    height={100}
+                    width={100}
                   />
                 </div>
                 <span className="flex flex-col gap-1">

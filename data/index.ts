@@ -64,3 +64,120 @@ export const testimonials = [
     title: "Director of AlphaStream Technologies",
   },
 ];
+
+export const Starters = [
+  {
+    name: "Goan Prawn Balchao",
+    price: "350",
+    title:
+      "Spicy prawns marinated in traditional Goan masala, served with a tangy dip.",
+  },
+  {
+    name: "Crispy Calamari Rings",
+    price: "320",
+    title: "Golden-fried calamari, served with zesty lime aioli.",
+  },
+  {
+    name: "Stuffed Crab in Shell",
+    price: "400",
+    title: "Fresh crab meat mixed with Goan spices, baked to perfection.",
+  },
+  {
+    name: "Fish Cutlets",
+    price: "300",
+    title: "Crispy fish patties flavored with Goan herbs and spices.",
+  },
+  {
+    name: "Vegetable Cafreal Kebabs",
+    price: "250",
+    title: "Chargrilled vegetable kebabs in a tangy, spicy cafreal marinade.",
+  },
+];
+
+export const MainCourse = [
+  {
+    name: "Grilled Lobster with Garlic Butter",
+    price: "1500",
+    title:
+      "Freshly caught lobster grilled with a garlic-butter glaze, served with lemon rice.",
+  },
+  {
+    name: "Goan Fish Curry with Rice",
+    price: "400",
+    title:
+      "Traditional Goan curry with the catch of the day, served with steamed rice.",
+  },
+  {
+    name: "Kingfish Rava Fry",
+    price: "450",
+    title:
+      "Kingfish marinated in Goan masala and fried in semolina for a crispy finish.",
+  },
+  {
+    name: "Prawn Xacuti",
+    price: "500",
+    title:
+      "A fragrant coconut-based prawn curry with Goan spices, served with soft bread rolls.",
+  },
+  {
+    name: "Crab Xec Xec",
+    price: "550",
+    title:
+      "Crab cooked in rich coconut milk gravy with roasted spices, served with rice or Goan bread.",
+  },
+];
+export const sides = [
+  {
+    name: "Goan Poi (Bread Rolls)",
+    price: "80",
+    title: "Freshly baked traditional Goan bread, perfect with curries.",
+  },
+  {
+    name: "Garlic Butter Naan",
+    price: "100",
+    title: "Soft, buttery naan with a hint of garlic.",
+  },
+  {
+    name: "Lemon Rice",
+    price: "150",
+    title: "Fluffy rice infused with lemon zest and mild spices.",
+  },
+];
+export const beverages = [
+  {
+    name: "Bebinca",
+    price: "250",
+    title:
+      "Classic Goan layered dessert, served with a scoop of vanilla ice cream.",
+  },
+  {
+    name: "Coconut Jaggery Pancakes",
+    price: "200",
+    title: "Traditional Goan pancakes filled with coconut and jaggery.",
+  },
+  {
+    name: "Serradura",
+    price: "180",
+    title:
+      "A delightful layered dessert made with whipped cream and crushed biscuits.",
+  },
+];
+export const desserts = [
+  {
+    name: "Kokum Cooler",
+    price: "120",
+    title:
+      "A refreshing local drink made from kokum fruit, perfect for beating the heat.",
+  },
+  {
+    name: "Feni Cocktail",
+    price: "300",
+    title:
+      "A traditional Goan drink with a modern twist, made with cashew or coconut feni.",
+  },
+  {
+    name: "Tender Coconut Water",
+    price: "80",
+    title: "Fresh and chilled coconut water straight from the shell.",
+  },
+];
